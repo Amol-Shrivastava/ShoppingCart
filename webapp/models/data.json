@@ -1,0 +1,274 @@
+{
+  "accessories": [
+    {
+      "type": "Screens",
+      "numberOfProducts": 5
+    },
+    {
+      "type": "Mice",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "CPUs",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "Keyboards",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "Speakers",
+      "numberOfProducts": 4
+    }
+  ],
+  "selectedAccessory": null,
+  
+  "products": [
+    { 
+      "type": "Screens",
+      "options":[
+          {
+            "name": "Samsung LC32G75TQSNXZA",
+            "about": "It's an amazing gaming monitor overall, with a fast refresh rate, crystal-clear motion, and incredibly low input lag.",
+            "resolutions": "2560x1440",
+            "price": "655.68$",
+            "refreshRate": "240Hz",
+            "company": "Samsung",
+            "img": "../assests/screens/samsung_screen.jpg"
+          },
+          {
+            "name": "LG 27GP950-B",
+            "about": "The LG 27GP950-B is the best console gaming monitor we've tested. It delivers an excellent gaming experience, with a fast response time and clear motion handling at both 120Hz and 60Hz, as well as low input lag for a responsive gaming experience.",
+            "resolutions": "3840x2160",
+            "price": "781.85$",
+            "refreshRate": "160Hz",
+            "company": "LG",
+            "img": "../assests/screens/lg_screen.jpg"
+          },
+          {
+            "name": "ASUS ROG Strix XG17AHPE",
+            "about": "The ASUS ROG Strix XG17AHPE is the best portable monitor we've tested. It's a surprisingly powerful portable display designed for productivity and gaming on the go. It has a built-in 7800mAh battery, about the same as a high-end laptop, so you can use it for hours without having to worry about a power source.",
+            "resolutions": "1920x1080",
+            "price": "567.41$",
+            "refreshRate": "240Hz",
+            "company": "ASUS",
+            "img": "../assests/screens/asus_screen.jpg"
+          },
+          {
+            "name": "Gigabyte M32U",
+            "about": "The Gigabyte M32U is the best MacBook Pro monitor that we've tested. It's an impressive monitor with a large, high-resolution screen. It supports USB-C, but unfortunately, its power delivery is too low to keep a MacBook fully charged while you're using it, which isn't ideal. ",
+            "resolutions": "3840x2160",
+            "price": "729.99$",
+            "refreshRate": "144Hz",
+            "company": "GigaByte",
+            "img": "../assests/screens/gigabyte_screen.jpg"
+          },
+          {
+            "name": "Gigabyte M34WQ",
+            "about": "The best PC monitor with an ultrawide format we've tested so far is the Gigabyte M34WQ. It's great for office use, with a great selection of additional features, including a built-in keyboard, video, and mouse switch that makes it easy to control and display two sources with a single set of input devices.",
+            "resolutions": "3440x1440",
+            "price": "369.99$",
+            "refreshRate": "144Hz",
+            "company": "GigaByte",
+            "img": "../assests/screens/gigabyte2_screen.jpg"
+          },
+          {
+            "name": "ASUS ProArt Display PA278CV",
+            "about": "The ASUS ProArt Display PA278CV is the best home office monitor that we've tested so far. It's a versatile display with fantastic ergonomics, so you can easily adjust it to an ideal viewing position. It looks great in most viewing environments, with impressive peak brightness, decent reflection handling, and wide viewing angles.",
+            "resolutions": "2560x1440",
+            "price": "449.99$",
+            "refreshRate": "75Hz",
+            "company": "ASUS",
+            "img": "../assests/screens/asus2_screen.jpg"
+          }
+        ]  
+      
+    },
+    { 
+      "type": "Mice",
+      "options": [
+          {
+            "name": "Logitech MX Master 3",
+            "dpi": "4,000",
+            "interface": "Bluetooth and 2.4GHz wireless",
+            "buttons": 7,
+            "price": "15$",
+            "about": "Comfortable design + Can be used on different devices",
+            "img": "../assets/mice/mice_1.jpg"
+          },
+          {
+            "name": "Logitech MX Anywhere 3",
+            "dpi": "4,000",
+            "interface": "Bluetooth and 2.4GHz wireless (pairs with up to three devices)",
+            "buttons": 6,
+            "price": "12.33$",
+            "about": "+Pairs with three devices + Compact and portable + Electromagnetic scroll wheel",
+            "img": "../assets/mice/mice_2.jpg"
+          },
+          {
+            "name": "Razer Pro Click",
+            "dpi": "16,000",
+            "interface": "Bluetooth, 2.4GHz wireless (pairs with up to four devices), wired",
+            "buttons": 8,
+            "price": "18$",
+            "about": "Great ergonomics + Plenty of buttons + Super smooth operation",
+            "img": "../assets/mice/mice_3.jpg"
+          },
+          {
+            "name": "Microsoft Classic IntelliMouse",
+            "dpi": "3200",
+            "interface": "Wired",
+            "buttons": 5,
+            "price": "22$",
+            "about": "Solid design + Responsive ",
+            "img": "../assets/mice/mice_4.jpg"
+          }
+        ]
+    },
+    {
+      "type": "CPUs",
+      "options": [
+          {
+            "name": "AMD Threadripper 3995WX",
+            "architecture": "Zen 2",
+            "Cores/threads": "64/128",
+            "baseFreq": "2.7 GHz",
+            "price": "40$",
+            "about": "Excellent rendering performance + Competitive performance in GPU-accelerated applications + Eight-Channel memory interface + 128 Lanes of PCIe 4.0 + Fully-validated ECC memory support",
+            "img": "../assests/CPUs/cpu_1.jpg"
+          },
+          {
+            "name": "AMD Threadripper 3970X",
+            "architecture": "Zen 2",
+            "Cores/threads": "32/64",
+            "baseFreq": "3.7GHz",
+            "price": "80.33$",
+            "img": "../assests/CPUs/cpu_2.jpg",
+            "about": "Excellent single and multithreaded performance + Competitive per-core pricing + Power efficient + Indium solder"
+          },
+          {
+            "name": "Intel Core i9-10980XE",
+            "architecture": "Cascade Lake-X (Skylake)",
+            "Cores/threads": "18/36",
+            "baseFreq": "3.0GHz",
+            "price": "80.33$",
+            "img": "../assests/CPUs/cpu_3'.jpg",
+            "about": "Incremental performance improvements + Lower power consumption + Overclockability + Backward compatibility"
+          },
+          {
+            "name": "AMD Ryzen 9 5950X",
+            "architecture": "Zen 3",
+            "Cores/threads": "16/32",
+            "baseFreq": "3.4GHz",
+            "price": "66.75$",
+            "img": "../assests/CPUs/cpu_4.jpg",
+            "about": "Class-leading 16 cores & 32 threads + Overclockable + Higher boost frequencies + Reasonable price-per-core + Power efficiency + PCIe Gen 4.0"
+          }
+        ]
+    },
+    { 
+      "type": "Keyboards",
+      "Keyboards":[
+          {
+            "name": "SteelSeries Apex Pro",
+            "connectivity": "Wired",
+            "size": "Full-size (100%)",
+            "type": "Mechanical",
+            "about": "As this is a premium board, it has tons of extra features, including dedicated media keys, full RGB backlighting, and an OLED screen that allows you to make settings or lighting adjustments directly on the keyboard without using any software.",
+            "price": "188.99$",
+            "img": "../assests/keyboards/keyboard_1.jpg"
+          },
+          {
+            "name": "Corsair K100 RGB",
+            "connectivity": "Wired",
+            "size": "Full-size (100%)",
+            "type": "Mechanical",
+            "about": "In the top right corner, there are dedicated media keys and a volume wheel, so you can control all of your media directly from the keyboard. On the left side, there's a column of dedicated macro keys for easy access and a unique iCUE wheel that allows you to make on-the-fly adjustments. If that weren't enough, this keyboard has 44 independent RGB zones that are all customizable using the companion software. Also, its latency is exceptionally low, and the maximum 8000Hz polling rate adds to the extremely responsive feel of the keyboard. ",
+            "price": "$223.99",
+            "img": "../assests/keyboards/keyboard_2.jpg"
+          },
+          {
+            "name": "Razer BlackWidow V3 Pro",
+            "connectivity": "Wired",
+            "size": "Full-size (100%)",
+            "type": "Mechanical",
+            "about": "The best wireless gaming keyboard we've tested is the Razer BlackWidow V3 Pro. It connects wirelessly using its dedicated USB receiver or Bluetooth. You can pair it with up to three devices simultaneously, great if you're streaming, gaming, or filming in a multi-device setup.",
+            "price": "$195.15",
+            "img": "../assests/keyboards/keyboard_3.jpg"
+          },
+          {
+            "name": "Obinslab Anne Pro 2",
+            "connectivity": "Wired",
+            "size": "Full-size (100%)",
+            "type": "Mechanical",
+            "about": "If you feel that bigger isn't necessarily better, you'll want to take a peek at the Obinslab Anne Pro 2, the best compact gaming keyboard that we've tested. It's a 60% compact keyboard that takes up very little space on your desk. Its frame is plastic, but it feels very sturdy, and it has high quality, doubleshot PBT keycaps with a matte finish.",
+            "price": "$100",
+            "img": "../assests/keyboards/keyboard_4.jpg"
+          }
+        ]
+    },
+    { 
+      "type": "Speakers",
+      "options":[
+          {
+            "name": "Sonos Move",
+            "Connectivity": "Bluetooth & Wifi",
+            "charge": "Battery Powered",
+            "voice": "Yes",
+            "about": "The Sonos Move is the best speaker that we've tested to use at home overall. It offers excellent voice assistant support, with Alexa and Google Assistant built-in, and can understand your commands from far away and in noisier settings. Its sleek design helps this speaker easily blend in with most home decor. It's also battery-powered and comes with a built-in carrying handle, making it easy to move the speaker between rooms.",
+            "price": "$149.99",
+            "img": "../assests/speakers/speaker_1.jpg"
+          },
+          {
+            "name": "Bose Home Speaker 500",
+            "Connectivity": "Bluetooth & Wifi",
+            "charge": "Battery Powered",
+            "voice": "Yes",
+            "about": "If you're looking for a home speaker that can play stereo content, consider the Bose Home Speaker 500 instead. While it isn't as portable as the Sonos Move, and its default sound profile isn't as well-balanced, it doesn't have to downmix stereo content into mono to play it, resulting in a more immersive sound. This wired model has Google Assistant and Alexa built-in, and it offers an incredible voice assistant performance.",
+            "price": "$349.00",
+            "img": "../assests/speakers/speaker_2.jpg"
+          },
+          {
+            "name": "Denon Home 350",
+            "Connectivity": "Bluetooth & Wifi",
+            "charge": "Battery Powered",
+            "voice": "Yes",
+            "about": "The Denon Home 350 is the best home speaker for music that we've tested. While it isn't as portable and versatile as the Sonos Move, this speaker can play stereo without downmixing it to mono, resulting in a more immersive soundstage. It can also produce a more extended low-bass, so you can feel the thump and punch in bass-heavy music like hip-hop or EDM. ",
+            "price": "$499.00",
+            "img": "../assests/speakers/speaker_3.jpg"
+          },
+          {
+            "name": "Ultimate Ears HYPERBOOM",
+            "Connectivity": "Bluetooth",
+            "charge": "Battery Powered",
+            "voice": "No",
+            "about": "The Ultimate Ears HYPERBOOM is the best customizable home speaker for music that we've tested. This large stereo speaker gives you even more control over its sound, thanks to the graphic EQ and presets featured in its companion app. It also comes with a room correction feature to adjust its sound according to the room it's placed in, called 'Adaptive EQ', which is available with iOS and Android devices. ",
+            "price": "$299.80",
+            "img": "../assests/speakers/speaker_4.jpg"
+          }
+        ]
+    }
+  ],
+
+  "empty": [
+    {
+      "img": "../assests/empty/empty_1.jpg",
+      "text": "Best and Affordable Screens"
+    },
+    {
+      "img": "../assests/empty/empty_4.jpg",
+      "text": "Fast and cool Processors"
+    },
+    {
+      "img": "../assests/empty/empty_2.jpg",
+      "text": "Easy to Use Keyboards"
+    },
+    {
+      "img": "../assests/empty/empty_3.jpg",
+      "text": "Strong Bass speakers"
+    }
+    
+
+  ] 
+
+}

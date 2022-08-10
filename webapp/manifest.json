@@ -1,0 +1,96 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "tata.fin.led",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "i18n": "i18n/i18n.properties"
+  },
+  "sap.ui": {
+    "deviceTypes": {
+      "desktop": true,
+      "phone": true,
+      "tablet": true
+    },
+    "technology": "UI5",
+    "supportedThemes": ["sap_fiori_3_dark"]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "libs": {
+        "sap.m": {},
+        "sap.f": {}
+      },
+      "minUI5Version": "1.60.0"
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "models/data.json"
+      }
+    },
+    "rootView": {
+      "viewName": "tata.fin.led.views.App",
+      "id": "idAppView",
+      "type": "XML"
+    },
+    "resources": {
+        "css": [{
+            "uri": "./css/styles.css"
+        }]
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlId": "layout",
+        "clearControlAggregation": true,
+        "viewType": "XML",
+        "viewPath": "tata.fin.led.views"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "Home",
+          "target": ["master", "home"]
+        },
+        {
+          "pattern": "category/{categoryType}",
+          "name": "CategoryPage",
+          "target": ["category", "home"]
+        }
+      ],
+      "targets": {
+        "master": {
+          "viewName": "master",
+          "viewId": "masterView",
+          "viewType": "XML",
+          "controlAggregation": "beginColumnPages"
+        },
+        "home": {
+          "viewName": "Welcome",
+          "viewId": "idEmpty",
+          "viewType": "XML",
+          "controlAggregation": "midColumnPages"
+        },
+        "category": {
+          "viewName": "category",
+          "viewId": "idCategoryPage",
+          "controlAggregation": "beginColumnPages"
+        }
+      }
+    }
+  }
+}

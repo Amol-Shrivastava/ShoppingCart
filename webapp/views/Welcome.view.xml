@@ -1,0 +1,38 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="tata.fin.led.controllers.Welcome"
+    xmlns="sap.m">
+    <Page>
+        <customHeader>
+            <Bar design="Header">
+        <contentMiddle>
+            <Title text="{i18n>welcomepageTitle}"/>
+        </contentMiddle>
+        <contentRight>
+            <ActionListItem text="Login"/>
+            <ActionListItem text="Sign Up"/>
+
+
+        </contentRight>
+    </Bar>
+</customHeader>
+
+<content>
+    <Carousel id="imgCarousel" loop="true" height="430px" pages="{
+                path: '/empty'
+            }" showPageIndicator="false">
+
+        <VBox renderType="Bare">
+
+            <Image alt="{text}" src="{
+                        path: 'img'
+                    }" height="auto" width="auto" class="carouselImg" />
+
+            <Text text="{text}" class="welcomeCarouselText"/>
+        </VBox>
+
+    </Carousel>
+</content>
+
+<footer>
+</footer>
+</Page>
+</mvc:View>

@@ -1,0 +1,32 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="tata.fin.led.controllers.master">
+    <Page title="{i18n>masterpageTitle}" backgroundDesign="Solid">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo rootLabel="{i18n>master_rootLabel}" contentLabel="{i18n>master_contentLabel}" headerLabel="{i18n>master_headerLabel}" subHeaderLabel="{i18n>master_subHeaderLabel}" contentRole="Navigation" headerRole="Search" />
+        </landmarkInfo>
+        <headerContent>
+            <Button press=".onBack" icon="sap-icon://home" visible="{appView>/smallScreenMode}" />
+        </headerContent>
+        <content>
+            <SearchField placeholder="Select the Category" showRefreshButton="true" value="{/selectedAccessory}" search=".onSearch" width="100%" tooltip="{i18n>homeSearchTooltip}" />
+            <!-- </subHeader> -->
+
+             <!-- List of categories -->
+            <List id="accessoryList" 
+            items="{
+                path: '/accessories'
+            }" headerText="{i18n>homeCategoryListHeader}">
+            
+                <StandardListItem title="{type}" counter="{numberOfProducts}" type="Active" press=".onCategoryPress">
+
+                </StandardListItem>
+            </List>
+
+     
+           
+
+
+        </content>
+    </Page>
+
+</mvc:View>
