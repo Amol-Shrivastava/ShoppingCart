@@ -1,11 +1,6 @@
 <core:FragmentDefinition 
 xmlns:core="sap.ui.core" xmlns="sap.m">
 
-    <StandardListItem
-        title="{name}"
-        info="{company}"
-    >
-        
-    </StandardListItem>/>
+    <List></List>
 
 </core:FragmentDefinition>

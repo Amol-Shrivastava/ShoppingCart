@@ -2,25 +2,25 @@ sap.ui.define([
     'tata/fin/led/controllers/BaseController',
     'sap/m/StandardListItem',
     'sap/ui/model/json/JSONModel',
-    'sap/ui/model/Context'
+    'sap/ui/model/Context',
+    'sap/ui/core/Fragment'
 ], function(BaseController,
-	StandardListItem,
-	JSONModel,
-    Context) {
+        Fragment
+    ) {
     BaseController.extend('tata.fin.led.controllers.category', {
         _categorySelected : '',
         _productModel: null,
                
         onInit: function() {
             this._router = this.getOwnerComponent().getRouter();
-            this._router.getRoute("CategoryPage").attachMatched(this._onRouteMatched, this);
+            this._router.getRoute("CategoryPage").attachMatched(this._onRouteMatched, this);            
             // console.log(++this._counter1);
             // console.log('Inside onInit: '+this.getView().getModel().getData());
         },        
 
         onAfterRendering: function() {
-            // this._productModel = this.getView().getModel() ? this.getView().getModel() : 
-            // console.log(this.getModelBase().getData());
+            // var oModel = new JSONModel('models/data.json');
+            // this.getView().setModel(oModel);
         },
 
         /**
@@ -29,21 +29,36 @@ sap.ui.define([
          * 
          */
          _onRouteMatched: function(oEvent) {
-            debugger;
-            // console.log(this.getModelBase().getBindingContext());
+            var productModel = this.getView().getModel().getProperty('/products');
             this._categorySelected = oEvent.getParameter('arguments').categoryType;           
-            let list = this.getView().byId("productList");
-            // let products = this.getView().getModel().getProperty('/products');
-            // let selectedArray = products.filter(({type}) => type === this._categorySelected);
-            // this.getView().getModel().setProperty('/selectedAccessory', selectedArray);
-            // var sPath = this.getView().getModel().getProperty('/selectedAccessory/options');
-            // var context = new Context(this.getView().getModel(), sPath);
-            // list.setBindingContext(context, "selectedAccessory")
-            // debugger;
-            // list.getBindingContext().setPath(`/selectedAccessory/${this._categorySelected}`);
-            // debugger;
-         
-            // this.getView().bindElement(`/Products/${this._categorySelected}`)
+            var productsArr = productModel;
+            var selectedProductArr = productsArr.filter(({type}) => type === this._categorySelected)[0].options;
+            this.getView().getModel().setProperty('/selectedAccessory', selectedProductArr);
+        },
+
+        /**
+         * factory function to product listItems on click of category
+         * 
+         */
+        listFragment: null,
+        showCategory: function(id, context) {
+            if(!this.listFragment) {
+            Fragment.load({
+                id: id, 
+                name: 'tcs.fin.led.fragments.listItem',
+                controller: this
+            }).then(oValue => {
+                this.listFragment = oValue;
+            });
+            this.listFragment.bindAggregation('items', {
+                path: '/selectedAccessory'
+            })
+
+        }else{
+
+        }
+
+        return this.listFragment;
         },
 
         /**

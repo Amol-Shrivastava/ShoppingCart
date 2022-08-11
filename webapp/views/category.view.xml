@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
       xmlns="sap.m" controllerName="tata.fin.led.controllers.category"
-      xmlns:core="sap.ui.core">
+      >
 
       <Page id="categoryPage" title="{type}" backgroundDesign="Solid" showNavButton="true" navButtonPress=".onBack">
 
@@ -13,14 +13,21 @@
                   <Button id="masterListFilterButton" icon="sap-icon://filter" press=".onFilter"/>
             </headerContent>
             <content>
-                  <List id="productList" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
-                        items="{
+                  <List id="productList" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" items="{
                               path: '/selectedAccessory'
-                        }" 
-                        noDataText="{i18n>categoryNoData}">
-                        <StandardListItem info="{price}" title="{name}">
-
-                        </StandardListItem>
+                        }" noDataText="{i18n>categoryNoData}">
+                        <items>
+                              <StandardListItem
+                                  
+                                  
+                                  info="{price}"
+                                 
+                                  title="{name}"
+                                  
+                              >
+                                  
+                              </StandardListItem>
+                        </items>
                   </List>
 
             </content>

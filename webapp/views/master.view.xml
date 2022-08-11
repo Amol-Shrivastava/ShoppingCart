@@ -8,7 +8,7 @@
             <Button press=".onBack" icon="sap-icon://home" visible="{appView>/smallScreenMode}" />
         </headerContent>
         <content>
-            <SearchField placeholder="Select the Category" showRefreshButton="true" value="{/selectedAccessory}" search=".onSearch" width="100%" tooltip="{i18n>homeSearchTooltip}" />
+            <SearchField placeholder="Select the Category" showRefreshButton="true" value="{/selectedAccessory/0/type}" search=".onSearch" width="100%" tooltip="{i18n>homeSearchTooltip}" />
             <!-- </subHeader> -->
 
              <!-- List of categories -->
