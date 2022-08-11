@@ -70,25 +70,33 @@
           "pattern": "category/{categoryType}",
           "name": "CategoryPage",
           "target": ["category", "home"]
+        },
+        {
+          "pattern": "category/{categoryType}/product/{sIndex}",
+          "name": "ProductPage",
+          "target": ["category", "product"]
         }
       ],
       "targets": {
         "master": {
           "viewName": "master",
           "viewId": "masterView",
-          "viewType": "XML",
           "controlAggregation": "beginColumnPages"
         },
         "home": {
           "viewName": "Welcome",
           "viewId": "idEmpty",
-          "viewType": "XML",
           "controlAggregation": "midColumnPages"
         },
         "category": {
           "viewName": "category",
           "viewId": "idCategoryPage",
           "controlAggregation": "beginColumnPages"
+        },
+        "product": {
+          "viewName": "product",
+          "viewId": "idProductPage",
+          "controlAggregation": "midColumnPages"
         }
       }
     }

@@ -1,0 +1,27 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="tata.fin.led.controllers.product">
+    <Page id="productPage" backgroundDesign="Solid">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo contentLabel="{i18n>Product_contentLabel}" footerLabel="{i18n>Product_footerLabel}" headerLabel="{i18n>Product_headerLabel}" rootLabel="{i18n>Product_rootLabel}">
+
+            </PageAccessibleLandmarkInfo>
+        </landmarkInfo>
+        <customHeader>
+           <Bar>
+               <contentLeft>
+                  <Button 
+                  type="Back"
+                  visible="{appView>/smallScreenMode}"
+                  press=".onBack"
+                  />
+
+               </contentLeft>
+               <contentMiddle>
+               </contentMiddle>
+               <contentRight>
+               </contentRight>
+           </Bar>
+        </customHeader>
+
+    </Page>
+</mvc:View>

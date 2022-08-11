@@ -1,12 +1,6 @@
 sap.ui.define([
-    'tata/fin/led/controllers/BaseController',
-    'sap/m/StandardListItem',
-    'sap/ui/model/json/JSONModel',
-    'sap/ui/model/Context',
-    'sap/ui/core/Fragment'
-], function(BaseController,
-        Fragment
-    ) {
+    'tata/fin/led/controllers/BaseController'
+], function(BaseController) {
     BaseController.extend('tata.fin.led.controllers.category', {
         _categorySelected : '',
         _productModel: null,
@@ -14,8 +8,6 @@ sap.ui.define([
         onInit: function() {
             this._router = this.getOwnerComponent().getRouter();
             this._router.getRoute("CategoryPage").attachMatched(this._onRouteMatched, this);            
-            // console.log(++this._counter1);
-            // console.log('Inside onInit: '+this.getView().getModel().getData());
         },        
 
         onAfterRendering: function() {
@@ -30,42 +22,34 @@ sap.ui.define([
          */
          _onRouteMatched: function(oEvent) {
             var productModel = this.getView().getModel().getProperty('/products');
-            this._categorySelected = oEvent.getParameter('arguments').categoryType;           
+            this._categorySelected = oEvent.getParameter('arguments').categoryType;   
+            this.byId('categoryPage').setTitle(this._categorySelected);        
             var productsArr = productModel;
             var selectedProductArr = productsArr.filter(({type}) => type === this._categorySelected)[0].options;
             this.getView().getModel().setProperty('/selectedAccessory', selectedProductArr);
-        },
-
-        /**
-         * factory function to product listItems on click of category
-         * 
-         */
-        listFragment: null,
-        showCategory: function(id, context) {
-            if(!this.listFragment) {
-            Fragment.load({
-                id: id, 
-                name: 'tcs.fin.led.fragments.listItem',
-                controller: this
-            }).then(oValue => {
-                this.listFragment = oValue;
-            });
-            this.listFragment.bindAggregation('items', {
-                path: '/selectedAccessory'
-            })
-
-        }else{
-
-        }
-
-        return this.listFragment;
-        },
+        },       
 
         /**
          * onBack :- function to be called when navbutton is pressed
          */
          onBack: function(oEvent) {
             this._router.navTo('Home')
+        },
+       
+        /**
+         * function to navigate to detail section of an Item
+         * 
+         */
+         onItemSelect: function(oEvent) {
+            debugger;
+            var item = oEvent.getParameter('listItem');
+            var path = item.getBindingContext().getPath();
+            var index = path.split('/')[path.split('/').length - 1];
+            
+            this._router.navTo('ProductPage', {
+                categoryType: this._categorySelected,
+                sIndex: index
+            })
         },
 
         /**

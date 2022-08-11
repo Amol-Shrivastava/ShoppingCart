@@ -1,8 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
-      xmlns="sap.m" controllerName="tata.fin.led.controllers.category"
-      >
+      xmlns="sap.m" controllerName="tata.fin.led.controllers.category">
 
-      <Page id="categoryPage" title="{type}" backgroundDesign="Solid" showNavButton="true" navButtonPress=".onBack">
+      <Page id="categoryPage" backgroundDesign="Solid" showNavButton="true" navButtonPress=".onBack">
 
             <landmarkInfo>
                   <PageAccessibleLandmarkInfo contentLabel="{i18n>Category_contentLabel}" headerLabel="{i18n>Category_headerLabel}" rootLabel="{i18n>Category_rootLabel}" footerLabel="{i18n>Category_footerLabel}">
@@ -13,20 +12,17 @@
                   <Button id="masterListFilterButton" icon="sap-icon://filter" press=".onFilter"/>
             </headerContent>
             <content>
-                  <List id="productList" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" items="{
+                  <List id="productList" 
+                  mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+                   items="{
                               path: '/selectedAccessory'
-                        }" noDataText="{i18n>categoryNoData}">
+                        }" 
+                        busyIndicatorDelay="0"
+                        noDataText="{i18n>categoryNoData}"
+                        selectionChange=".onItemSelect"
+                        >
                         <items>
-                              <StandardListItem
-                                  
-                                  
-                                  info="{price}"
-                                 
-                                  title="{name}"
-                                  
-                              >
-                                  
-                              </StandardListItem>
+                              <StandardListItem info="{price}" title="{name}"/>
                         </items>
                   </List>
 
