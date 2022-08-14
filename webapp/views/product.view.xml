@@ -7,21 +7,69 @@
             </PageAccessibleLandmarkInfo>
         </landmarkInfo>
         <customHeader>
-           <Bar>
-               <contentLeft>
-                  <Button 
-                  type="Back"
-                  visible="{appView>/smallScreenMode}"
-                  press=".onBack"
-                  />
-
-               </contentLeft>
-               <contentMiddle>
-               </contentMiddle>
-               <contentRight>
-               </contentRight>
-           </Bar>
+            <Bar>
+                <contentLeft>
+                    <Button type="Back" visible="{appView>/smallScreenMode}" press=".onBack" />
+                </contentLeft>
+                <contentMiddle>
+                    <Title id="prodTitle"/>
+                </contentMiddle>
+                <contentRight>
+                    <ActionListItem text="Login"/>
+                    <ActionListItem text="Sign Up"/>
+                </contentRight>
+            </Bar>
         </customHeader>
+        <content>
+            <ObjectHeader title="{/productDetail/name}" intro="{/productDetail/about}" number="{
+                    parts: [{path: '/productDetail/price'}],
+                    type: 'sap.ui.model.type.Currency'
+                }">
+                <attributes>
+                    <ObjectAttribute id="prop1">
+                    </ObjectAttribute>
+                    <ObjectAttribute id="prop2">
+                    </ObjectAttribute>
+                    <ObjectAttribute id="prop3">
+                    </ObjectAttribute>
+                </attributes>
+            </ObjectHeader>
+
+            <HBox
+             alignItems="Center"
+             justifyContent="Center"
+             class="marginTop"
+            >
+                <items>
+                    <Image
+                activeSrc="{/productDetail/about}"
+                alt="{/productDetail/name}"
+                
+                height="400px"
+                
+                src="{/productDetail/img}"
+                useMap="true"
+                width="400px"
+            >
+                <detailBox>
+                    <LightBox 
+                    >
+                        <imageContent>
+                            <LightBoxItem
+                                alt="{/productDetail/about}"
+                                imageSrc="{/productDetail/img}"
+                                title="{/productDetail/name}"
+                            >
+                                
+                            </LightBoxItem>
+                        </imageContent>
+                    </LightBox>
+                </detailBox>
+            </Image>
+                </items>
+            </HBox>
+            
+        </content>
 
     </Page>
 </mvc:View>

@@ -9,8 +9,6 @@
         <contentRight>
             <ActionListItem text="Login"/>
             <ActionListItem text="Sign Up"/>
-
-
         </contentRight>
     </Bar>
 </customHeader>

@@ -41,7 +41,7 @@ sap.ui.define([
          * 
          */
          onItemSelect: function(oEvent) {
-            debugger;
+            // debugger;
             var item = oEvent.getParameter('listItem');
             var path = item.getBindingContext().getPath();
             var index = path.split('/')[path.split('/').length - 1];

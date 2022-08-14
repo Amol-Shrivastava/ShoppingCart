@@ -9,11 +9,7 @@ sap.ui.define([
     return Controller.extend('tata.fin.led.controllers.BaseController', {
         init: function() {
             console.log('Inside BaseController');
-        },
-
-        productModel: null,
-
-        oCore: sap.ui.getCore(),
+        },   
         
         createModel: function(url) {
             var deviceModel = new JSONModel();
@@ -30,9 +26,11 @@ sap.ui.define([
         },
 
         getModelBase: function() {
-            // var productModel = null;
-            // return productModel = this.getView().getModel() ? this.getView().getModel() : this.getView().setModel(this.createModel('../models/data.json'));
-                
+            return this.getView().getModel();
+        },
+
+        getI18nModel: function(prop) {
+            return this.getView().getModel('i18n').getProperty(prop);
         },
 
 

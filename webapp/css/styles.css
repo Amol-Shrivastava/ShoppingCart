@@ -28,3 +28,7 @@ img {
     border: 3px solid red;
     width: 100%;
 }
+
+.marginTop {
+    margin-top: 2rem;
+}

@@ -35,7 +35,7 @@
             "price": "655.68$",
             "refreshRate": "240Hz",
             "company": "Samsung",
-            "img": "../assests/screens/samsung_screen.jpg"
+            "img": "assests/screens/samsung_screen.jpg"
           },
           {
             "name": "LG 27GP950-B",
@@ -44,7 +44,7 @@
             "price": "781.85$",
             "refreshRate": "160Hz",
             "company": "LG",
-            "img": "../assests/screens/lg_screen.jpg"
+            "img": "assests/screens/lg_screen.jpg"
           },
           {
             "name": "ASUS ROG Strix XG17AHPE",
@@ -53,7 +53,7 @@
             "price": "567.41$",
             "refreshRate": "240Hz",
             "company": "ASUS",
-            "img": "../assests/screens/asus_screen.jpg"
+            "img": "assests/screens/asus_screen.jpg"
           },
           {
             "name": "Gigabyte M32U",
@@ -62,7 +62,7 @@
             "price": "729.99$",
             "refreshRate": "144Hz",
             "company": "GigaByte",
-            "img": "../assests/screens/gigabyte_screen.jpg"
+            "img": "assests/screens/gigabyte_screen.jpg"
           },
           {
             "name": "Gigabyte M34WQ",
@@ -71,7 +71,7 @@
             "price": "369.99$",
             "refreshRate": "144Hz",
             "company": "GigaByte",
-            "img": "../assests/screens/gigabyte2_screen.jpg"
+            "img": "assests/screens/gigabyte2_screen.jpg"
           },
           {
             "name": "ASUS ProArt Display PA278CV",
@@ -80,7 +80,7 @@
             "price": "449.99$",
             "refreshRate": "75Hz",
             "company": "ASUS",
-            "img": "../assests/screens/asus2_screen.jpg"
+            "img": "assests/screens/asus2_screen.jpg"
           }
         ]  
       
@@ -95,7 +95,7 @@
             "buttons": 7,
             "price": "15$",
             "about": "Comfortable design + Can be used on different devices",
-            "img": "../assets/mice/mice_1.jpg"
+            "img": "assests/mice/mice_1.jpg"
           },
           {
             "name": "Logitech MX Anywhere 3",
@@ -104,7 +104,7 @@
             "buttons": 6,
             "price": "12.33$",
             "about": "+Pairs with three devices + Compact and portable + Electromagnetic scroll wheel",
-            "img": "../assets/mice/mice_2.jpg"
+            "img": "../assests/mice/mice_2.jpg"
           },
           {
             "name": "Razer Pro Click",
@@ -113,7 +113,7 @@
             "buttons": 8,
             "price": "18$",
             "about": "Great ergonomics + Plenty of buttons + Super smooth operation",
-            "img": "../assets/mice/mice_3.jpg"
+            "img": "../assests/mice/mice_3.jpg"
           },
           {
             "name": "Microsoft Classic IntelliMouse",
@@ -122,7 +122,7 @@
             "buttons": 5,
             "price": "22$",
             "about": "Solid design + Responsive ",
-            "img": "../assets/mice/mice_4.jpg"
+            "img": "../assests/mice/mice_4.jpg"
           }
         ]
     },
@@ -136,7 +136,7 @@
             "baseFreq": "2.7 GHz",
             "price": "40$",
             "about": "Excellent rendering performance + Competitive performance in GPU-accelerated applications + Eight-Channel memory interface + 128 Lanes of PCIe 4.0 + Fully-validated ECC memory support",
-            "img": "../assests/CPUs/cpu_1.jpg"
+            "img": "assests/CPUs/cpu_1.jpg"
           },
           {
             "name": "AMD Threadripper 3970X",
@@ -144,7 +144,7 @@
             "Cores/threads": "32/64",
             "baseFreq": "3.7GHz",
             "price": "80.33$",
-            "img": "../assests/CPUs/cpu_2.jpg",
+            "img": "assests/CPUs/cpu_2.jpg",
             "about": "Excellent single and multithreaded performance + Competitive per-core pricing + Power efficient + Indium solder"
           },
           {
@@ -153,7 +153,7 @@
             "Cores/threads": "18/36",
             "baseFreq": "3.0GHz",
             "price": "80.33$",
-            "img": "../assests/CPUs/cpu_3'.jpg",
+            "img": "assests/CPUs/cpu_3'.jpg",
             "about": "Incremental performance improvements + Lower power consumption + Overclockability + Backward compatibility"
           },
           {
@@ -162,7 +162,7 @@
             "Cores/threads": "16/32",
             "baseFreq": "3.4GHz",
             "price": "66.75$",
-            "img": "../assests/CPUs/cpu_4.jpg",
+            "img": "assests/CPUs/cpu_4.jpg",
             "about": "Class-leading 16 cores & 32 threads + Overclockable + Higher boost frequencies + Reasonable price-per-core + Power efficiency + PCIe Gen 4.0"
           }
         ]
@@ -177,7 +177,7 @@
             "type": "Mechanical",
             "about": "As this is a premium board, it has tons of extra features, including dedicated media keys, full RGB backlighting, and an OLED screen that allows you to make settings or lighting adjustments directly on the keyboard without using any software.",
             "price": "188.99$",
-            "img": "../assests/keyboards/keyboard_1.jpg"
+            "img": "assests/keyboards/keyboard_1.jpg"
           },
           {
             "name": "Corsair K100 RGB",
@@ -186,7 +186,7 @@
             "type": "Mechanical",
             "about": "In the top right corner, there are dedicated media keys and a volume wheel, so you can control all of your media directly from the keyboard. On the left side, there's a column of dedicated macro keys for easy access and a unique iCUE wheel that allows you to make on-the-fly adjustments. If that weren't enough, this keyboard has 44 independent RGB zones that are all customizable using the companion software. Also, its latency is exceptionally low, and the maximum 8000Hz polling rate adds to the extremely responsive feel of the keyboard. ",
             "price": "$223.99",
-            "img": "../assests/keyboards/keyboard_2.jpg"
+            "img": "assests/keyboards/keyboard_2.jpg"
           },
           {
             "name": "Razer BlackWidow V3 Pro",
@@ -195,7 +195,7 @@
             "type": "Mechanical",
             "about": "The best wireless gaming keyboard we've tested is the Razer BlackWidow V3 Pro. It connects wirelessly using its dedicated USB receiver or Bluetooth. You can pair it with up to three devices simultaneously, great if you're streaming, gaming, or filming in a multi-device setup.",
             "price": "$195.15",
-            "img": "../assests/keyboards/keyboard_3.jpg"
+            "img": "assests/keyboards/keyboard_3.jpg"
           },
           {
             "name": "Obinslab Anne Pro 2",
@@ -204,7 +204,7 @@
             "type": "Mechanical",
             "about": "If you feel that bigger isn't necessarily better, you'll want to take a peek at the Obinslab Anne Pro 2, the best compact gaming keyboard that we've tested. It's a 60% compact keyboard that takes up very little space on your desk. Its frame is plastic, but it feels very sturdy, and it has high quality, doubleshot PBT keycaps with a matte finish.",
             "price": "$100",
-            "img": "../assests/keyboards/keyboard_4.jpg"
+            "img": "assests/keyboards/keyboard_4.jpg"
           }
         ]
     },
@@ -218,7 +218,7 @@
             "voice": "Yes",
             "about": "The Sonos Move is the best speaker that we've tested to use at home overall. It offers excellent voice assistant support, with Alexa and Google Assistant built-in, and can understand your commands from far away and in noisier settings. Its sleek design helps this speaker easily blend in with most home decor. It's also battery-powered and comes with a built-in carrying handle, making it easy to move the speaker between rooms.",
             "price": "$149.99",
-            "img": "../assests/speakers/speaker_1.jpg"
+            "img": "assests/speakers/speaker_1.jpg"
           },
           {
             "name": "Bose Home Speaker 500",
@@ -227,7 +227,7 @@
             "voice": "Yes",
             "about": "If you're looking for a home speaker that can play stereo content, consider the Bose Home Speaker 500 instead. While it isn't as portable as the Sonos Move, and its default sound profile isn't as well-balanced, it doesn't have to downmix stereo content into mono to play it, resulting in a more immersive sound. This wired model has Google Assistant and Alexa built-in, and it offers an incredible voice assistant performance.",
             "price": "$349.00",
-            "img": "../assests/speakers/speaker_2.jpg"
+            "img": "assests/speakers/speaker_2.jpg"
           },
           {
             "name": "Denon Home 350",
@@ -236,7 +236,7 @@
             "voice": "Yes",
             "about": "The Denon Home 350 is the best home speaker for music that we've tested. While it isn't as portable and versatile as the Sonos Move, this speaker can play stereo without downmixing it to mono, resulting in a more immersive soundstage. It can also produce a more extended low-bass, so you can feel the thump and punch in bass-heavy music like hip-hop or EDM. ",
             "price": "$499.00",
-            "img": "../assests/speakers/speaker_3.jpg"
+            "img": "assests/speakers/speaker_3.jpg"
           },
           {
             "name": "Ultimate Ears HYPERBOOM",
@@ -245,7 +245,7 @@
             "voice": "No",
             "about": "The Ultimate Ears HYPERBOOM is the best customizable home speaker for music that we've tested. This large stereo speaker gives you even more control over its sound, thanks to the graphic EQ and presets featured in its companion app. It also comes with a room correction feature to adjust its sound according to the room it's placed in, called 'Adaptive EQ', which is available with iOS and Android devices. ",
             "price": "$299.80",
-            "img": "../assests/speakers/speaker_4.jpg"
+            "img": "assests/speakers/speaker_4.jpg"
           }
         ]
     }
@@ -253,19 +253,19 @@
 
   "empty": [
     {
-      "img": "../assests/empty/empty_1.jpg",
+      "img": "assests/empty/empty_1.jpg",
       "text": "Best and Affordable Screens"
     },
     {
-      "img": "../assests/empty/empty_4.jpg",
+      "img": "assests/empty/empty_4.jpg",
       "text": "Fast and cool Processors"
     },
     {
-      "img": "../assests/empty/empty_2.jpg",
+      "img": "assests/empty/empty_2.jpg",
       "text": "Easy to Use Keyboards"
     },
     {
-      "img": "../assests/empty/empty_3.jpg",
+      "img": "assests/empty/empty_3.jpg",
       "text": "Strong Bass speakers"
     }
     
