@@ -2,14 +2,22 @@ sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
     'sap/ui/Device',
+    'sap/ui/core/routing/History',
+    'sap/ui/core/UIComponent'
 
 ], function( Controller,
 	JSONModel,
-	Device) {
+	Device,
+	History,
+	UIComponent) {
     return Controller.extend('tata.fin.led.controllers.BaseController', {
         init: function() {
             console.log('Inside BaseController');
         },   
+
+        _getRouter: function() {
+            return UIComponent.getRouter();
+        },
         
         createModel: function(url) {
             var deviceModel = new JSONModel();
@@ -34,8 +42,15 @@ sap.ui.define([
         },
 
 
-        onBack: function(event) {
+        onBack: function() {
             debugger;
+            var prevHash = History.getInstance().getPreviousHash();
+            if(prevHash !== undefined) {
+                window.history.go(-1);
+            } else {
+                this._getRouter().navTo("home");
+            }
+            
         }
         
 

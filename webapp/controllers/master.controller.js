@@ -7,7 +7,6 @@ sap.ui.define([
         onInit: function() {
             console.log('Inside master controller');
             this._router = this.getOwnerComponent().getRouter();
-            // console.log(this.getOwnerComponent().getModel().getData());
         },
 
         /**

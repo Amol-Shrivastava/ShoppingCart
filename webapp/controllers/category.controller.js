@@ -11,8 +11,6 @@ sap.ui.define([
         },        
 
         onAfterRendering: function() {
-            // var oModel = new JSONModel('models/data.json');
-            // this.getView().setModel(oModel);
         },
 
         /**
@@ -28,14 +26,6 @@ sap.ui.define([
             var selectedProductArr = productsArr.filter(({type}) => type === this._categorySelected)[0].options;
             this.getView().getModel().setProperty('/selectedAccessory', selectedProductArr);
         },       
-
-        /**
-         * onBack :- function to be called when navbutton is pressed
-         */
-         onBack: function(oEvent) {
-            this._router.navTo('Home')
-        },
-       
         /**
          * function to navigate to detail section of an Item
          * 

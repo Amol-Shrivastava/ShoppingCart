@@ -5,7 +5,7 @@
             <PageAccessibleLandmarkInfo rootLabel="{i18n>master_rootLabel}" contentLabel="{i18n>master_contentLabel}" headerLabel="{i18n>master_headerLabel}" subHeaderLabel="{i18n>master_subHeaderLabel}" contentRole="Navigation" headerRole="Search" />
         </landmarkInfo>
         <headerContent>
-            <Button press=".onBack" icon="sap-icon://home" visible="{appView>/smallScreenMode}" />
+            <Button press="onBack" icon="sap-icon://home" visible="{appView>/smallScreenMode}" />
         </headerContent>
         <content>
             <SearchField placeholder="Select the Category" showRefreshButton="true" value="{/productSelected}" search=".onSearch" width="100%" tooltip="{i18n>homeSearchTooltip}" />
