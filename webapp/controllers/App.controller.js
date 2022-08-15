@@ -17,6 +17,7 @@ sap.ui.define(
       
       var deviceModel = this.createModel(Device);
       this.getView().setModel(deviceModel, 'device');
+      
       },
 
       onStateChange: function(event) {

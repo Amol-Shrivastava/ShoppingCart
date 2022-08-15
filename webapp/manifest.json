@@ -39,6 +39,10 @@
       "": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "models/data.json"
+      },
+      "products": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./models/products.json"
       }
     },
     "rootView": {

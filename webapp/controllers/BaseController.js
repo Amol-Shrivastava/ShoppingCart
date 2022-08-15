@@ -21,17 +21,10 @@ sap.ui.define([
         
         createModel: function(url) {
             var deviceModel = new JSONModel();
-            deviceModel.loadData(url);
+            deviceModel.setData(url);
             return deviceModel;
         },
 
-        setModelBase: function(modelIns, modelName) {
-            if(modelName) {
-                this.getView().setModel(modelIns, modelName);
-            }else {
-                this.getView().setModel(modelIns);
-            }
-        },
 
         getModelBase: function() {
             return this.getView().getModel();
