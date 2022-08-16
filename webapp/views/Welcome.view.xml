@@ -71,6 +71,26 @@
 
                                         </FlexBox>
 
+                                        <FlexBox 
+                                            renderType="Bare"
+                                            alignItems="Center"
+                                            justifyContent="Center"
+                                         >
+                                         
+                                             <Image
+                                                src="{
+                                                    path: 'promoted>img'
+                                                }"
+                                                width= "50%"
+                                                height= "50%"
+                                                alt="{promoted>name}"
+                                             >
+                                             </Image>
+                                             
+                                        
+
+                                        </FlexBox>
+
                                     </l:Grid>
                                 </l:BlockLayoutCell>
                             </l:content>
