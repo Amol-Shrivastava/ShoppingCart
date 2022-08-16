@@ -59,14 +59,14 @@
                                             renderType="Bare"
                                          >
                                          <l:VerticalLayout>
-                                             <!-- <ObjectIdentifier
-                                                title="{name}"
+                                             <ObjectIdentifier
+                                                title="{promoted>name}"
                                                 titleActive="true"
                                                 titlePress=".onSelectProduct"
                                              >
                                                  
-                                             </ObjectIdentifier> -->
-                                             <Title text="{name}"/>                                            
+                                             </ObjectIdentifier>
+                                             
                                         </l:VerticalLayout>
 
                                         </FlexBox>
