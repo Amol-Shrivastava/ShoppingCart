@@ -1,45 +1,60 @@
 sap.ui.define(
-  [
-    "tata/fin/led/controllers/BaseController",
-    "sap/ui/model/json/JSONModel"
-],
-  function (BaseController) {
+  ["tata/fin/led/controllers/BaseController", "sap/ui/model/json/JSONModel"],
+  function (BaseController, JSONModel) {
     return BaseController.extend("tata.fin.led.controllers.Welcome", {
       _oModel: null,
       onInit: function () {
+        this._oModel = this.getOwnerComponent().getModel("products");
+
+        this._oModel.attachRequestCompleted(() => {
+          this._getPromottedItems(this._oModel);
+        });
+},
+
+      onBeforeRendering: function () {},
+
+      onAfterRendering: function () {
         var obj = {
-          promottedItems: [],
+          promotedItems: [],
           featuredItems: [],
-          recentlyViewedItems: []
+          recentlyViewedItems: [],
         };
 
-        this._oModel = this.getOwnerComponent().getModel("products");
-       
-       this._oModel.attachRequestCompleted(() =>{});
-        
-        console.log(this._oModel);
+        let oModel = new JSONModel();
+        oModel.setData(obj);
+
+        this.getView().setModel(oModel, "promoted");
       },
 
-      onBeforeRendering: function() {
-       
-        
-      },
+      _getPromottedItems: function (model) {
+        let { products } = model.getData();
+        let randomElArr = [];
 
-      onAfterRendering: function() {
-            //  this._getProductArr();
-            // var oModel = this.getOwnerComponent().getModel("products");
-            // this.getView().setModel(oModel, "products");
-            // debugger;
-      },
+        let el1 = this._randomElements(products);
+        let el2 = this._randomElements(products);
 
-      _getProductArr: function() {
+        if (el1 == el2) {
+          this._randomElements(products);
+        } else {
+          randomElArr.push(el1);
+          randomElArr.push(el2);
+        }
+
+        this.getView()
+          .getModel("promoted")
+          .setProperty("/promotedItems", randomElArr);
+
+        console.log(this.getView().getModel("promoted").getProperty('/promotedItems'));
         debugger;
-        // var productArr = this.getView().getModel().getProperty('/products');
-        
+      },
+
+      _randomElements: function (arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      },
+
+      onSelectProduct: function(oEvent) {
+        debugger;
       }
-
     });
-
-    
   }
 );

@@ -1,37 +1,89 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="tata.fin.led.controllers.Welcome"
-    xmlns="sap.m">
+    xmlns="sap.m" xmlns:l="sap.ui.layout">
     <Page>
         <customHeader>
             <Bar design="Header">
-        <contentMiddle>
-            <Title text="{i18n>welcomepageTitle}"/>
-        </contentMiddle>
-        <contentRight>
-            <ActionListItem text="Login"/>
-            <ActionListItem text="Sign Up"/>
-        </contentRight>
-    </Bar>
-</customHeader>
+                <contentMiddle>
+                    <Title text="{i18n>welcomepageTitle}"/>
+                </contentMiddle>
+                <contentRight>
+                    <ActionListItem text="Login"/>
+                    <ActionListItem text="Sign Up"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
 
-<content>
-    <Carousel id="imgCarousel" loop="true" height="430px" pages="{
+        <content>
+            <Carousel id="imgCarousel" loop="true" height="430px" pages="{
                 path: '/empty'
             }" showPageIndicator="false">
 
-        <VBox renderType="Bare">
+                <VBox renderType="Bare">
 
-            <Image alt="{text}" src="{
+                    <Image alt="{text}" src="{
                         path: 'img'
                     }" height="auto" width="auto" class="carouselImg" />
 
-            <Text text="{text}" class="welcomeCarouselText"/>
-        </VBox>
+                    <Text text="{text}" class="welcomeCarouselText"/>
+                </VBox>
 
-    </Carousel>
+            </Carousel>
 
-</content>
+            <Panel id="panelPromoted" accessibleRole="Region" backgroundDesign="Transparent" class="smallMarginTop">
 
-<footer>
-</footer>
-</Page>
+                <headerToolbar>
+                    <Toolbar>
+                        <content>
+                            <Title text="{i18n>Promoted_Title}" level="H3" titleStyle="H2" class="smallMarginTopBottomLeft" />
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                 
+                <content>
+                    <l:BlockLayout background="Dashboard">
+                        <l:BlockLayoutRow
+                            id="promotedRow"
+                            content="{
+                                path: 'promoted>/promotedItems'
+                            }"
+                        >
+                            <l:content>
+                                <l:BlockLayoutCell>
+                                    <l:Grid
+                                        defaultSpan="XL12 L12 M12 S12"
+                                        vSpacing="0"
+                                        hSpacing="0"
+                                    >
+                                        <FlexBox 
+                                            height="3.5rem"
+                                            renderType="Bare"
+                                         >
+                                         <l:VerticalLayout>
+                                             <!-- <ObjectIdentifier
+                                                title="{name}"
+                                                titleActive="true"
+                                                titlePress=".onSelectProduct"
+                                             >
+                                                 
+                                             </ObjectIdentifier> -->
+                                             <Title text="{name}"/>                                            
+                                        </l:VerticalLayout>
+
+                                        </FlexBox>
+
+                                    </l:Grid>
+                                </l:BlockLayoutCell>
+                            </l:content>
+                        </l:BlockLayoutRow>
+                </l:BlockLayout>
+                </content>
+
+
+            </Panel>
+
+        </content>
+
+        <footer>
+        </footer>
+    </Page>
 </mvc:View>

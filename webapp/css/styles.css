@@ -32,3 +32,12 @@ img {
 .marginTop {
     margin-top: 2rem;
 }
+
+.smallMarginTopBottomLeft{
+    margin: 1.5rem 0 1.5rem 0.5rem;
+}
+
+.smallMarginTop{
+    margin-top: 0.5rem;
+    /* padding: 0.5rem; */
+}
