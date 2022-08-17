@@ -54,7 +54,13 @@ sap.ui.define(
 
       onSelectProduct: function(oEvent) {
         debugger;
+      },
+
+      onAddToCart: function(oEvent) {
+        debugger;
       }
+
+      
     });
   }
 );

@@ -1,5 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="tata.fin.led.controllers.Welcome"
-    xmlns="sap.m" xmlns:l="sap.ui.layout">
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
     <Page>
         <customHeader>
             <Bar design="Header">
@@ -38,64 +39,54 @@
                         </content>
                     </Toolbar>
                 </headerToolbar>
-                 
+
                 <content>
                     <l:BlockLayout background="Dashboard">
-                        <l:BlockLayoutRow
-                            id="promotedRow"
-                            content="{
+                        <l:BlockLayoutRow id="promotedRow" content="{
                                 path: 'promoted>/promotedItems'
-                            }"
-                        >
+                            }">
                             <l:content>
                                 <l:BlockLayoutCell>
-                                    <l:Grid
-                                        defaultSpan="XL12 L12 M12 S12"
-                                        vSpacing="0"
-                                        hSpacing="0"
-                                    >
-                                        <FlexBox 
-                                            height="3.5rem"
-                                            renderType="Bare"
-                                         >
-                                         <l:VerticalLayout>
-                                             <ObjectIdentifier
-                                                title="{promoted>name}"
-                                                titleActive="true"
-                                                titlePress=".onSelectProduct"
-                                             >
-                                                 
-                                             </ObjectIdentifier>
-                                             
-                                        </l:VerticalLayout>
+                                    <l:Grid defaultSpan="XL12 L12 M12 S12" vSpacing="0" hSpacing="0">
+                                        <FlexBox height="3.5rem" renderType="Bare">
+                                            <l:VerticalLayout>
+                                                <ObjectIdentifier title="{promoted>name}" titleActive="true" titlePress=".onSelectProduct" text="{promoted>type}">
 
+                                                </ObjectIdentifier>
+
+                                            </l:VerticalLayout>
                                         </FlexBox>
 
-                                        <FlexBox 
-                                            renderType="Bare"
-                                            alignItems="Center"
-                                            justifyContent="Center"
-                                         >
-                                         
-                                             <Image
-                                                src="{
+                                        <FlexBox renderType="Bare" alignItems="Center" justifyContent="Center">
+
+                                            <Image src="{
                                                     path: 'promoted>img'
-                                                }"
-                                                width= "50%"
-                                                height= "50%"
-                                                alt="{promoted>name}"
-                                             >
-                                             </Image>
-                                             
-                                        
+                                                }" width= "50%" height= "50%" alt="{promoted>name}">
+                                            </Image>
+
+
 
                                         </FlexBox>
+
+                                        <Button tooltip="{i18n>addToCart}" type="Emphasized" press=".onAddToCart" icon="sap-icon://cart-3">
+                                            <layoutData>
+                                                <l:GridData span="XL4 L4 M4 S4"/>
+                                            </layoutData>
+                                        </Button>
+
+                                        <ObjectListItem class="welcomePrice" number="{promoted>price}">
+                                            <layoutData>
+                                                <l:GridData span="XL8 L8 M8 S8" />
+                                            </layoutData>
+
+                                        </ObjectListItem>
+
 
                                     </l:Grid>
                                 </l:BlockLayoutCell>
                             </l:content>
                         </l:BlockLayoutRow>
-                </l:BlockLayout>
+                    </l:BlockLayout>
                 </content>
 
 
