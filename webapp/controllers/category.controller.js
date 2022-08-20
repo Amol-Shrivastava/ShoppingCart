@@ -35,11 +35,12 @@ sap.ui.define([
             var item = oEvent.getParameter('listItem');
             var path = item.getBindingContext().getPath();
             var index = path.split('/')[path.split('/').length - 1];
-            
+            this.selectedProduct.push(path);
             this._router.navTo('ProductPage', {
                 categoryType: this._categorySelected,
                 sIndex: index
             })
+            debugger;
         },
 
         /**

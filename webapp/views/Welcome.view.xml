@@ -30,8 +30,8 @@
 
             </Carousel>
 
+            <!-- Panel with title, image, button and price for promoted Items -->
             <Panel id="panelPromoted" accessibleRole="Region" backgroundDesign="Transparent" class="smallMarginTop">
-
                 <headerToolbar>
                     <Toolbar>
                         <content>
@@ -48,6 +48,7 @@
                             <l:content>
                                 <l:BlockLayoutCell>
                                     <l:Grid defaultSpan="XL12 L12 M12 S12" vSpacing="0" hSpacing="0">
+                                        <!-- flex box with title -->
                                         <FlexBox height="3.5rem" renderType="Bare">
                                             <l:VerticalLayout>
                                                 <ObjectIdentifier title="{promoted>name}" titleActive="true" titlePress=".onSelectProduct" text="{promoted>type}">
@@ -57,6 +58,7 @@
                                             </l:VerticalLayout>
                                         </FlexBox>
 
+                                        <!-- flex box with Image -->
                                         <FlexBox renderType="Bare" alignItems="Center" justifyContent="Center">
 
                                             <Image src="{
@@ -68,25 +70,119 @@
 
                                         </FlexBox>
 
-                                        <Button tooltip="{i18n>addToCart}" type="Emphasized" press=".onAddToCart" icon="sap-icon://cart-3">
+                                        <!-- button with grid data for positioning -->
+                                        <Button tooltip="{i18n>addToCart}" type="Emphasized" 
+                                            press=".onAddToCart" icon="sap-icon://cart-3"
+                                            class="smallMarginTop">
                                             <layoutData>
                                                 <l:GridData span="XL4 L4 M4 S4"/>
                                             </layoutData>
                                         </Button>
 
-                                        <ObjectListItem class="welcomePrice" number="{promoted>price}">
+                                        <!-- Price in object list item format -->
+                                        <ObjectListItem class="welcomePrice smallMarginTop" number="{promoted>price}">
                                             <layoutData>
                                                 <l:GridData span="XL8 L8 M8 S8" />
                                             </layoutData>
 
                                         </ObjectListItem>
-
-
                                     </l:Grid>
                                 </l:BlockLayoutCell>
                             </l:content>
                         </l:BlockLayoutRow>
                     </l:BlockLayout>
+                </content>
+            </Panel>
+
+            <!-- Panel with title, image, button and price for Recently Viewed Items -->
+            <Panel id="panelRecently" accessibleRole="Complementary" class="smallMarginTop">
+
+                <!-- Title toolbar for this panel -->
+                <headerToolbar>
+
+                    <Toolbar>
+                        <content>
+                            <Title text="{i18n>Recently_Viewed}" level="H3" titleStyle="H2">
+
+                            </Title>
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+
+                    <!-- Block when no product has been -->
+                    <l:BlockLayout background="Dashboard">
+                        <l:content>
+                            <l:BlockLayoutRow id="recentlyNotViewedProducts" content="{
+                                path: 'promoted>/nothingViewed'
+                            }">
+                                <l:content>
+                                    <l:BlockLayoutCell>
+                                        <l:content>
+                                            <FlexBox alignItems="Center" justifyContent="Center" visible="{promoted>/isFirst}" height="3.4rem">
+
+                                                <items>
+                                                    <Text text="{promoted>text}"/>
+                                                </items>
+                                            </FlexBox>
+                                        </l:content>
+
+                                    </l:BlockLayoutCell>
+                                </l:content>
+                            </l:BlockLayoutRow>
+
+                            <!-- Block when products has been -->
+                            <l:BlockLayoutRow id="recentlyViewedProducts" visible= "false" content="{
+                                    path: 'promoted>/recentlyViewedItems'
+                                }">
+                                <l:content>
+                                    <l:BlockLayoutCell>
+                                        <l:Grid defaultSpan="XL12 L12 M12 S12" vSpacing="0" hSpacing="0">
+
+                                            <FlexBox renderType="Bare" height="3.5rem">
+                                                <l:VerticalLayout>
+                                                    <ObjectIdentifier title="{promoted>name}" titlePress=".onSelectProduct">
+                                                    </ObjectIdentifier>
+                                                </l:VerticalLayout>
+                                            </FlexBox>
+
+
+                                            <FlexBox renderType="Bare" justifyContent="Center">
+                                                <Image src="{promoted>img}" alt="{promoted>name}"
+                                                     width="100%" height="100%" press=".onSelectProduct">
+                                                </Image> 
+                                            </FlexBox>
+
+                                            <Button
+                                             tooltip="{i18n>addToCart}"
+                                             icon="sap-icon://cart-3"
+                                             type="Emphasized"
+                                             press=".onAddToCart">
+                                            
+
+                                            <layoutData>
+                                                <l:GridData span="XL4 L4 M4 S4" />
+                                            </layoutData>
+                                            </Button>
+
+                                            <ObjectListItem
+                                            number="{promoted>price}"
+                                            class="welcomePrice">
+                                            <layoutData>
+                                                <l:GridData span="XL8 L8 M8 S8"/>
+                                            </layoutData>
+
+                                            </ObjectListItem>
+
+                                                                                  
+                                         </l:Grid>
+                                </l:BlockLayoutCell>
+                            </l:content>
+                            </l:BlockLayoutRow>
+                        </l:content>
+
+                    </l:BlockLayout>
+
                 </content>
 
 

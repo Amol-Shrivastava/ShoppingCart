@@ -4,6 +4,20 @@ sap.ui.define(
     return BaseController.extend("tata.fin.led.controllers.Welcome", {
       _oModel: null,
       onInit: function () {
+        var obj = {
+          promotedItems: [],
+          featuredItems: [],
+          recentlyViewedItems: [],
+          nothingViewed: [{
+            text: "Hi You are here for the first time, Enjoy the experience",
+          }]
+        };
+
+        let oModel = new JSONModel();
+        oModel.setData(obj);
+
+        this.getView().setModel(oModel, "promoted");
+
         this._oModel = this.getOwnerComponent().getModel("products");
 
         this._oModel.attachRequestCompleted(() => {
@@ -14,16 +28,7 @@ sap.ui.define(
       onBeforeRendering: function () {},
 
       onAfterRendering: function () {
-        var obj = {
-          promotedItems: [],
-          featuredItems: [],
-          recentlyViewedItems: [],
-        };
-
-        let oModel = new JSONModel();
-        oModel.setData(obj);
-
-        this.getView().setModel(oModel, "promoted");
+        this._getRecentlyViewedItems();
       },
 
       _getPromottedItems: function (model) {
@@ -34,7 +39,7 @@ sap.ui.define(
         let el2 = this._randomElements(products);
 
         if (el1 == el2) {
-          this._randomElements(products);
+          el2 = this._randomElements(products);
         } else {
           randomElArr.push(el1);
           randomElArr.push(el2);
@@ -45,7 +50,25 @@ sap.ui.define(
           .setProperty("/promotedItems", randomElArr);
 
         console.log(this.getView().getModel("promoted").getProperty('/promotedItems'));
+        // debugger;
+      },
+
+      _getRecentlyViewedItems: function() {
         debugger;
+        if(this.selectedProduct.length == 0){
+        }else {
+          this.getView().byId('recentlyNotViewedProducts').setVisible(false);
+          let el1 = this.getView().getModel().getProperty('/selectedAccessory')[0];
+          let el2 = this.getView().getModel().getProperty('/selectedAccessory')[1];
+          
+          let temp = [el1, el2];
+
+          this.getView().getModel('promoted').setProperty('/recentlyViewedItems', temp);
+          
+          debugger;
+
+          this.getView().byId('recentlyViewedProducts').setVisible(true);
+        }
       },
 
       _randomElements: function (arr) {

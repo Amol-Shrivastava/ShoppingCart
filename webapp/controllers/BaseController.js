@@ -11,6 +11,7 @@ sap.ui.define([
 	History,
 	UIComponent) {
     return Controller.extend('tata.fin.led.controllers.BaseController', {
+        selectedProduct: [],
         init: function() {
             console.log('Inside BaseController');
         },   
