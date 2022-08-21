@@ -15,7 +15,7 @@
                   <List id="productList" 
                   mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
                    items="{
-                              path: '/selectedAccessory'
+                              path: '/selectedProducts'
                         }" 
                         busyIndicatorDelay="0"
                         noDataText="{i18n>categoryNoData}"

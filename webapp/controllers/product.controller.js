@@ -16,9 +16,12 @@ sap.ui.define([
             
             var {categoryType, sIndex} = oEvent.getParameter('arguments');
             this._selectedCategory = categoryType;
-            this._selectedProduct = this.getView().getModel().getProperty('/selectedAccessory')[sIndex];
-            this.getView().getModel().setProperty('/productDetail', this._selectedProduct);
+            this._selectedProduct = this.getView().getModel().getProperty('/selectedProducts')[sIndex];
+            this.getView().getModel().setProperty('/selectedProduct', this._selectedProduct);
             this.getView().byId('prodTitle').setText(this._selectedCategory);
+            var viewedItems = this.getView().getModel().getProperty('/viewedItems');
+            viewedItems.push(this._selectedProduct)
+            this.getView().getModel().setProperty('/viewedItems', viewedItems);
             this._changeLabels();
         },
 

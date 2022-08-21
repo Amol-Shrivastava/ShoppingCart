@@ -35,9 +35,8 @@ sap.ui.define([
             return this.getView().getModel('i18n').getProperty(prop);
         },
 
-
         onBack: function() {
-            debugger;
+            // debugger;
             var prevHash = History.getInstance().getPreviousHash();
             if(prevHash !== undefined) {
                 window.history.go(-1);
@@ -45,7 +44,11 @@ sap.ui.define([
                 this._getRouter().navTo("home");
             }
             
-        }
+        },
+
+        onAddToCart: function(oEvent) {
+            debugger;
+          }
         
 
     })

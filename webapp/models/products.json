@@ -1,4 +1,27 @@
-{
+{ 
+  "accessories": [
+    {
+      "type": "Screens",
+      "numberOfProducts": 5
+    },
+    {
+      "type": "Mice",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "CPUs",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "Keyboards",
+      "numberOfProducts": 4
+    },
+    {
+      "type": "Speakers",
+      "numberOfProducts": 4
+    }
+  ],
+  
   "products": [
     {
       "type": "Screens",
@@ -223,6 +246,25 @@
       "about": "The Ultimate Ears HYPERBOOM is the best customizable home speaker for music that we've tested. This large stereo speaker gives you even more control over its sound, thanks to the graphic EQ and presets featured in its companion app. It also comes with a room correction feature to adjust its sound according to the room it's placed in, called 'Adaptive EQ', which is available with iOS and Android devices. ",
       "price": "$299.80",
       "img": "assests/speakers/speaker_4.jpg"
+    }
+  ],
+
+  "empty": [
+    {
+      "img": "assests/empty/empty_1.jpg",
+      "text": "Best and Affordable Screens"
+    },
+    {
+      "img": "assests/empty/empty_4.jpg",
+      "text": "Fast and cool Processors"
+    },
+    {
+      "img": "assests/empty/empty_2.jpg",
+      "text": "Easy to Use Keyboards"
+    },
+    {
+      "img": "assests/empty/empty_3.jpg",
+      "text": "Strong Bass speakers"
     }
   ]
 }

@@ -19,12 +19,12 @@ sap.ui.define([
          * 
          */
          _onRouteMatched: function(oEvent) {
-            var productModel = this.getView().getModel().getProperty('/products');
+            // debugger;
+            var productsArr = this.getView().getModel('products').getProperty('/products');
             this._categorySelected = oEvent.getParameter('arguments').categoryType;   
             this.byId('categoryPage').setTitle(this._categorySelected);        
-            var productsArr = productModel;
-            var selectedProductArr = productsArr.filter(({type}) => type === this._categorySelected)[0].options;
-            this.getView().getModel().setProperty('/selectedAccessory', selectedProductArr);
+            var selectedProductObj = productsArr.filter(({type}) => type === this._categorySelected);
+            this.getView().getModel().setProperty('/selectedProducts', selectedProductObj);
         },       
         /**
          * function to navigate to detail section of an Item
@@ -39,8 +39,9 @@ sap.ui.define([
             this._router.navTo('ProductPage', {
                 categoryType: this._categorySelected,
                 sIndex: index
-            })
-            debugger;
+            });
+            
+            // debugger;
         },
 
         /**

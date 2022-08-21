@@ -16,16 +16,16 @@
 
         <content>
             <Carousel id="imgCarousel" loop="true" height="430px" pages="{
-                path: '/empty'
+                path: 'products>/empty'
             }" showPageIndicator="false">
 
                 <VBox renderType="Bare">
 
-                    <Image alt="{text}" src="{
-                        path: 'img'
+                    <Image alt="{products>text}" src="{
+                        path: 'products>img'
                     }" height="auto" width="auto" class="carouselImg" />
 
-                    <Text text="{text}" class="welcomeCarouselText"/>
+                    <Text text="{products>text}" class="welcomeCarouselText"/>
                 </VBox>
 
             </Carousel>
@@ -134,12 +134,12 @@
                             <!-- Block when products has been -->
                             <l:BlockLayoutRow id="recentlyViewedProducts" visible= "false" content="{
                                     path: 'promoted>/recentlyViewedItems'
-                                }">
+                                }" >
                                 <l:content>
                                     <l:BlockLayoutCell>
-                                        <l:Grid defaultSpan="XL12 L12 M12 S12" vSpacing="0" hSpacing="0">
+                                        <l:Grid defaultSpan="XL12 L12 M12 S12" vSpacing="0" hSpacing="0" id="recentlyViewedGrid">
 
-                                            <FlexBox renderType="Bare" height="3.5rem">
+                                            <FlexBox renderType="Bare" height="3.5rem" id="recentlyViewedBox">
                                                 <l:VerticalLayout>
                                                     <ObjectIdentifier title="{promoted>name}" titlePress=".onSelectProduct">
                                                     </ObjectIdentifier>
@@ -149,7 +149,7 @@
 
                                             <FlexBox renderType="Bare" justifyContent="Center">
                                                 <Image src="{promoted>img}" alt="{promoted>name}"
-                                                     width="100%" height="100%" press=".onSelectProduct">
+                                                     width="auto" height="auto" press=".onSelectProduct">
                                                 </Image> 
                                             </FlexBox>
 
@@ -187,7 +187,21 @@
 
 
             </Panel>
+            
+            <!-- <Panel id="favoriteItems" accessibleRole="Region" class="smallMarginTop" backgroundDesign="Transparent">
+                <headerToolbar>
+                    <Toolbar>
+                        <content>
+                            <Title level="H3" titleStyle="H2" text="{i18n>Favorite_Items}" />
+                            <l:BlockLayout background="Dashboard">
+                                <l:BlockLayoutRow >
+                                </l:BlockLayoutRow>
 
+                            </l:BlockLayout>
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+            </Panel> -->
         </content>
 
         <footer>

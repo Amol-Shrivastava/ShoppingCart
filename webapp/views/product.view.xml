@@ -21,8 +21,8 @@
             </Bar>
         </customHeader>
         <content>
-            <ObjectHeader title="{/productDetail/name}" intro="{/productDetail/about}" number="{
-                    parts: [{path: '/productDetail/price'}],
+            <ObjectHeader title="{/selectedProduct/name}" intro="{/selectedProduct/about}" number="{
+                    parts: [{path: '/selectedProduct/price'}],
                     type: 'sap.ui.model.type.Currency'
                 }">
                 <attributes>
@@ -42,12 +42,12 @@
             >
                 <items>
                     <Image
-                activeSrc="{/productDetail/about}"
-                alt="{/productDetail/name}"
+                activeSrc="{/selectedProduct/about}"
+                alt="{/selectedProduct/name}"
                 
                 height="400px"
                 
-                src="{/productDetail/img}"
+                src="{/selectedProduct/img}"
                 useMap="true"
                 width="400px"
             >
@@ -56,9 +56,9 @@
                     >
                         <imageContent>
                             <LightBoxItem
-                                alt="{/productDetail/about}"
-                                imageSrc="{/productDetail/img}"
-                                title="{/productDetail/name}"
+                                alt="{/selectedProduct/about}"
+                                imageSrc="{/selectedProduct/img}"
+                                title="{/selectedProduct/name}"
                             >
                                 
                             </LightBoxItem>

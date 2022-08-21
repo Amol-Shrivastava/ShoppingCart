@@ -6,7 +6,6 @@ sap.ui.define(
       onInit: function () {
         var obj = {
           promotedItems: [],
-          featuredItems: [],
           recentlyViewedItems: [],
           nothingViewed: [{
             text: "Hi You are here for the first time, Enjoy the experience",
@@ -54,18 +53,31 @@ sap.ui.define(
       },
 
       _getRecentlyViewedItems: function() {
-        debugger;
+        // debugger;
+        
+        let el1, el2 = {};
+        let viewedItemsArr = this.getView().getModel().getProperty('/viewedItems');
+        let temp = [];
         if(this.selectedProduct.length == 0){
+
         }else {
           this.getView().byId('recentlyNotViewedProducts').setVisible(false);
-          let el1 = this.getView().getModel().getProperty('/selectedAccessory')[0];
-          let el2 = this.getView().getModel().getProperty('/selectedAccessory')[1];
-          
-          let temp = [el1, el2];
-
+          // let el1 = this.getView().getModel().getProperty('/viewedItems')[0];
+          // let el2 = this.getView().getModel().getProperty('/viewedItems')[1];
+          if(viewedItemsArr.length > 1) {
+            for(let i=0; i<viewedItemsArr.length;i++) {
+              el1 = viewedItemsArr[viewedItemsArr.length - 2];
+              el2 = viewedItemsArr[viewedItemsArr.length - 1];
+            }
+            temp = [el1, el2];
+          }else{
+            el1 = viewedItemsArr[viewedItemsArr.length - 1];
+            temp = [el1];
+          }          
+        
           this.getView().getModel('promoted').setProperty('/recentlyViewedItems', temp);
           
-          debugger;
+          // debugger;
 
           this.getView().byId('recentlyViewedProducts').setVisible(true);
         }
@@ -77,11 +89,9 @@ sap.ui.define(
 
       onSelectProduct: function(oEvent) {
         debugger;
-      },
-
-      onAddToCart: function(oEvent) {
-        debugger;
       }
+
+     
 
       
     });

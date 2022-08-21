@@ -31,8 +31,7 @@ sap.ui.define([
          */
 
         onCategoryPress: function(event) {
-            // debugger;
-            var binding = event.getSource().getBindingContext();
+            var binding = event.getSource().getBindingContext('products');
             var productModel = binding.getModel();
             var category = productModel.getProperty(binding.getPath()).type;
             this._router.navTo("CategoryPage", {
