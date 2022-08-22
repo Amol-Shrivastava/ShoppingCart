@@ -9,6 +9,9 @@ sap.ui.define(
           recentlyViewedItems: [],
           nothingViewed: [{
             text: "Hi You are here for the first time, Enjoy the experience",
+          }],
+          nothingCart: [{
+            text: "Your Cart is Empty.."
           }]
         };
 
@@ -62,8 +65,6 @@ sap.ui.define(
 
         }else {
           this.getView().byId('recentlyNotViewedProducts').setVisible(false);
-          // let el1 = this.getView().getModel().getProperty('/viewedItems')[0];
-          // let el2 = this.getView().getModel().getProperty('/viewedItems')[1];
           if(viewedItemsArr.length > 1) {
             for(let i=0; i<viewedItemsArr.length;i++) {
               el1 = viewedItemsArr[viewedItemsArr.length - 2];
@@ -89,8 +90,18 @@ sap.ui.define(
 
       onSelectProduct: function(oEvent) {
         debugger;
-      }
+      },
 
+      onAddToCart: function(oEvent) {
+      let path = oEvent.getSource().getBindingContext('promoted').getPath();
+      let product = this.getView().getModel('promoted').getProperty(path);
+      let cartArr = this.getView().getModel().getProperty('/cartItems');
+      cartArr.push(product);
+      this.getView().getModel().setProperty('/cartItems', cartArr);
+      this.getView().byId('cartItems').setVisible(true);
+      this.getView().byId('noCartItems').setVisible(false);
+      debugger;
+    },
      
 
       

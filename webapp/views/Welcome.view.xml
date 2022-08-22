@@ -188,20 +188,79 @@
 
             </Panel>
             
-            <!-- <Panel id="favoriteItems" accessibleRole="Region" class="smallMarginTop" backgroundDesign="Transparent">
+            <Panel id="favoriteItems" backgroundDesign="Transparent" class="smallMarginTop">
                 <headerToolbar>
                     <Toolbar>
                         <content>
-                            <Title level="H3" titleStyle="H2" text="{i18n>Favorite_Items}" />
-                            <l:BlockLayout background="Dashboard">
-                                <l:BlockLayoutRow >
-                                </l:BlockLayoutRow>
-
-                            </l:BlockLayout>
+                          <Title text="{i18n>Favorite_Items}" level="H3"
+                            titleStyle="H2"/>  
                         </content>
                     </Toolbar>
                 </headerToolbar>
-            </Panel> -->
+
+                <content>
+                    <l:BlockLayout background="Dashboard">
+                        <l:BlockLayoutRow id="noCartItems" content="{
+                            path: 'promoted>/nothingCart'
+                        }">
+                            <l:BlockLayoutCell>
+                                <FlexBox
+                                    alignItems="Center"
+                                    justifyContent="Center"
+                                >
+                                    <items>
+                                        <Title text="{promoted>text}" />
+                                    </items>
+                                </FlexBox>
+                    </l:BlockLayoutCell>
+                        </l:BlockLayoutRow>
+
+                        <l:BlockLayoutRow id="cartItems" content="{
+                            path: '/cartItems'
+                        }" visible="false">
+                          <l:BlockLayoutCell>
+                            <l:Grid defaultSpan="XL12 L12 M12 S12" 
+                            vSpacing="0" hSpacing="0">
+
+                            <FlexBox renderType="Bare" height="3.5rem">
+                                <items>
+                                    <ObjectIdentifier
+                                        text="{type}"
+                                        title="{name}"
+                                    >
+                                    </ObjectIdentifier>
+                                </items>
+                            </FlexBox>
+
+                            <FlexBox>
+                                <items>
+                                    <Image 
+                                    height="100%" 
+                                    width="100%"
+                                    src="{
+                                        path: 'img'
+                                    }">
+                                    </Image>
+                                </items>
+                            </FlexBox>
+
+                            <Button type="Emphasized" icon="sap-icon://basket"
+                             text="{i18n>buyBtn}"
+                             class="sapUiTinyMarginTop"
+                             press=".onBuy">
+                                <layoutData>
+                                    <l:GridData span="XL12 L12 M12 S12"/>
+                                </layoutData>
+
+                            </Button>
+
+                            </l:Grid>
+                          </l:BlockLayoutCell>
+                        </l:BlockLayoutRow>
+                    </l:BlockLayout>
+                </content>
+
+            </Panel>
         </content>
 
         <footer>

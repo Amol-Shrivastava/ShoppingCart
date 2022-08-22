@@ -46,9 +46,9 @@ sap.ui.define([
             
         },
 
-        onAddToCart: function(oEvent) {
+        onBuy: function(oEvent) {
             debugger;
-          }
+        }
         
 
     })
