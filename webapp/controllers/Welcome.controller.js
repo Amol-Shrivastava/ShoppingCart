@@ -1,6 +1,10 @@
 sap.ui.define(
-  ["tata/fin/led/controllers/BaseController", "sap/ui/model/json/JSONModel"],
-  function (BaseController, JSONModel) {
+  ["tata/fin/led/controllers/BaseController", 
+  "sap/ui/model/json/JSONModel",
+  "tata/fin/led/utility/cart",
+  "sap/m/MessageToast"
+],
+  function (BaseController, JSONModel, Cart, MessageToast) {
     return BaseController.extend("tata.fin.led.controllers.Welcome", {
       _oModel: null,
       onInit: function () {
@@ -31,6 +35,7 @@ sap.ui.define(
 
       onAfterRendering: function () {
         this._getRecentlyViewedItems();
+        let cartArr = this.getView().getModel().getProperty('/cartItems');
       },
 
       _getPromottedItems: function (model) {
@@ -95,12 +100,18 @@ sap.ui.define(
       onAddToCart: function(oEvent) {
       let path = oEvent.getSource().getBindingContext('promoted').getPath();
       let product = this.getView().getModel('promoted').getProperty(path);
-      let cartArr = this.getView().getModel().getProperty('/cartItems');
-      cartArr.push(product);
-      this.getView().getModel().setProperty('/cartItems', cartArr);
-      this.getView().byId('cartItems').setVisible(true);
-      this.getView().byId('noCartItems').setVisible(false);
-      debugger;
+      let cartModel = this.getView().getModel();
+      let cartArr = cartModel.getProperty('/cartItems');
+      Cart.addToCart(product,cartArr, cartModel).then(msg => {
+        MessageToast.show(msg);
+        if(cartArr){
+          this.getView().byId('cartItems').setVisible(true);
+          this.getView().byId('noCartItems').setVisible(false);
+        }
+      }).catch(err => MessageToast.show(err, {
+        width: '30rem'
+      }))
+      
     },
      
 
